@@ -1,0 +1,25 @@
+.shipment-grid {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.shipment-grid th,
+.shipment-grid td {
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+  font-size: 14px;
+}
+
+.shipment-grid th {
+  background: #f5f5f5;
+  font-weight: 600;
+}
+
+.shipment-grid tr:hover {
+  background: #f0f7ff;
+  cursor: pointer;
+}
