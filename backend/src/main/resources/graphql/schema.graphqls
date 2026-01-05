@@ -1,0 +1,35 @@
+type Shipment {
+  id: ID!
+  name: String!
+  age: Int
+  shipmentClass: String
+  subjects: [String]
+  attendance: Float
+}
+
+input ShipmentInput {
+  name: String!
+  age: Int
+  shipmentClass: String
+  subjects: [String]
+  attendance: Float
+}
+
+
+type Query {
+
+  shipments(
+    page: Int = 0
+    size: Int = 10
+    sortBy: String = "id"
+    direction: String = "ASC"
+    name: String
+  ): [Shipment]
+
+  shipment(id: ID!): Shipment
+}
+
+type Mutation {
+  addShipment(input: ShipmentInput): Shipment
+  updateShipment(id: ID!, input: ShipmentInput): Shipment
+}
